@@ -1,5 +1,6 @@
 ﻿body {
     background-color: rgb(153, 200, 255);
+    margin: 0px;
 }
 ul {
     position: fixed;
@@ -27,7 +28,3 @@ li {
         li a:hover {
             background-color: #111;
         }
-
-.titel {
-    padding: 50px;
-}
