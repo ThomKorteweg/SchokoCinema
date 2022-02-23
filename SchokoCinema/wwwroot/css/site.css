@@ -10,11 +10,12 @@
 }
 
 ul {
+    position: fixed;
     top: 0;
     width: 100%;
     list-style-type: none;
-    margin: 0;
-    padding-left: 100px;
+    margin-left: 100px;
+    padding: 0;
     overflow: hidden;
     background-color: #050101;
 }
@@ -32,5 +33,9 @@ li {
     }
 
         li a:hover {
-            background-color: #111;
+            background-color: #808080;
         }
+
+.active {
+    background-color: #A34C9D;
+}
