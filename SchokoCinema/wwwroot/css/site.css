@@ -8,8 +8,8 @@ p {
 }
 
 .movies {
-    display : flex;
-    margin-right : 20px;
+    display: flex;
+    margin-right: 20px;
 }
 
 .movie {
@@ -52,3 +52,8 @@ li {
     top: 0;
     left: 0;
 }
+
+    .logo img {
+        width: 100px;
+        height: 46px;
+    }
