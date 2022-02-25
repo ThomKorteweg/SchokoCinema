@@ -12,7 +12,9 @@ p {
     margin-right : 20px;
 }
 
-.movie {
+.movie img {
+    width: 180px;
+    height: 283px; 
 }
 
 ul {
@@ -52,3 +54,4 @@ li {
     top: 0;
     left: 0;
 }
+
