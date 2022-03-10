@@ -55,3 +55,12 @@ li {
     left: 0;
 }
 
+    .logo img {
+        width: 100px;
+        height: 46px;
+    }
+
+header{
+    position : fixed;
+    padding-right :inherit;
+}

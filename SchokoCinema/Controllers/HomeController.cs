@@ -33,5 +33,11 @@ namespace SchokoCinema.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        [Route("contact")]
+        public IActionResult Contact()
+         {
+            return View();
+        }
     }
 }
