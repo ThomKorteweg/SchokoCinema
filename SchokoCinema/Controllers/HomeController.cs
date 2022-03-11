@@ -39,5 +39,10 @@ namespace SchokoCinema.Controllers
          {
             return View();
         }
+        [Route("filmdetails")]
+        public IActionResult filmdetails()
+        {
+            return View();
+        }
     }
 }
