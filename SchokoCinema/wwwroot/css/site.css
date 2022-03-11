@@ -8,7 +8,8 @@ p {
 }
 
 .movies {
-    display : flex;
+    display: flex;
+    margin-right: 20px;
 }
 
 .movie img {
@@ -60,7 +61,9 @@ li {
         height: 46px;
     }
 
+
 header{
     position : fixed;
     padding-right :inherit;
 }
+
