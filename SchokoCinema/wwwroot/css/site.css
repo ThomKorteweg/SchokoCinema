@@ -15,6 +15,7 @@ p {
 .movie img {
     width: 180px;
     height: 283px; 
+    margin-right : 20px ;
 }
 
 ul {
@@ -59,3 +60,10 @@ li {
         width: 100px;
         height: 46px;
     }
+
+
+header{
+    position : fixed;
+    padding-right :inherit;
+}
+
