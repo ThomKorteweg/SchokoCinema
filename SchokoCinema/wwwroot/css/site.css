@@ -4,9 +4,9 @@
 }
 
 p {
-    padding-left: 683px;
     font-size: 30px;
     color: white;
+    text-align: center;
 }
 
 .movies {
@@ -80,9 +80,6 @@ header{
     padding-right :inherit;
 }
 
-form {
-    background-image: url("img_bioscoopzaal.jpg");
-}
 
 input[type=text], select, textarea {
     width: 20%;
@@ -115,3 +112,46 @@ input[type=submit] {
     background-image: url('img_bioscoop.webp');
     padding: 20px;
 }
+
+#rectangle2 {
+    height: 1000px;
+    border-radius: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 200px;
+    background: #5954FF;
+}
+
+p1 {
+    font-size: 30px;
+    color: white;
+    display: block;
+}
+
+.image{
+    flex: 1;
+}
+
+.image img{
+    width: 100%;
+}
+
+.filmDetails {
+    display: flex;
+    background: #5954FF;
+}
+
+.info {
+    flex: 2;
+    padding: 20px;
+}
+
+h1{
+    text-align: center;
+}
+
+.form{
+    display: block;
+    text-align: center;
+}
+    
