@@ -139,6 +139,8 @@ p1 {
 .filmDetails {
     display: flex;
     background: #5954FF;
+    margin-left : 50px;
+    margin-right : 50px;
 }
 
 .info {
@@ -154,4 +156,6 @@ h1{
     display: block;
     text-align: center;
 }
+
+
     
