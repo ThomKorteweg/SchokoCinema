@@ -22,7 +22,7 @@ namespace SchokoCinema.Controllers
         public IActionResult Index()
         {
             // alle producten ophalen
-            var rows = DatabaseConnector.GetRows("select * from product");
+            var rows = DatabaseConnector.GetRows("select * from movies");
 
             // lijst maken om alle namen in te stoppen
             List<string> names = new List<string>();
@@ -30,7 +30,7 @@ namespace SchokoCinema.Controllers
             foreach (var row in rows)
             {
                 // elke naam toevoegen aan de lijst met namen
-                names.Add(row["naam"].ToString());
+                names.Add(row["titel"].ToString());
             }
 
             // de lijst met namen in de html stoppen
@@ -58,6 +58,15 @@ namespace SchokoCinema.Controllers
         {
             return View();
         }
+
+        [Route("Movies/{id}")]
+        public IActionResult Filmdetails(int id)
+        {
+            var Movies = GetMovies(id);
+
+            return View(Movies);
+        }
+        
     }
 
 }
