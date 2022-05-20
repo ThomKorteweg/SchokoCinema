@@ -22,7 +22,7 @@ namespace SchokoCinema.Controllers
 
         public IActionResult Index()
         {
-            var movies = GetAllMovies();
+            List<Movie> movies = GetAllMovies();
 
             // de lijst met namen in de html stoppen
             return View(movies);
@@ -66,8 +66,8 @@ namespace SchokoCinema.Controllers
             foreach (var row in rows)
             {
                 Movie m = new Movie();
-                m.titel = row["titel"].ToString();
-                m.poster = row["poster"].ToString();
+                m.Titel = row["titel"].ToString();
+                m.Poster = row["poster"].ToString();
                 m.beschrijving = row["beschrijving"].ToString();
                 m.id = Convert.ToInt32(row["id"]);
 

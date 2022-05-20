@@ -1,14 +1,17 @@
 ﻿@using SchokoCinema.Database
-@model List<string>
+@model List<Movie>
 @{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
+<div class="movie-list">
     <h1>Alle Namen!</h1>
-    @foreach(string naam in Model)
+    @foreach(Movie m in Model)
     {
-      <p>@naam</p>    
+      <div class="movie">
+        <p>@m.Titel</p>    
+        <img src="@m.Poster"/>
+      </div>
     }
 </div>
 

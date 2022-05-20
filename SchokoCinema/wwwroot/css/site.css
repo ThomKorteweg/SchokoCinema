@@ -157,5 +157,9 @@ h1{
     text-align: center;
 }
 
+.movie img{
+    width: 200px;
+    margin-right : 400px;
+}
 
     
