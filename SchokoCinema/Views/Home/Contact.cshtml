@@ -1,14 +1,36 @@
-﻿ @{ 
+﻿@model SchokoCinema.Models.Person
+@{ 
  ViewData["Title"] = "Contact"; 
 }
-<h1>Contact met ons opnemenen? </h1>
+<h1>@ViewData["Title"]</h1>
 
-<div class="form">
-  <form>
-     Voornaam: <input type="text" name="firstname" placeholder="Uw voornaam.." required/> <br />
-     Achternaam: <input type="text" name="lastname" placeholder="Uw achternaam.." required/><br />
-     Email: <input type="text" name="E-mail" placeholder="Uw E-mail.." pattern="[A-Za-z0-9._%+-]+@@[A-Za-z0-9.-]+\.[a-z]{2,}$" required/><br />
-     Telefoonnummer: <input type="text" name="Phone number" placeholder="Uw Telefoonnummer.." pattern="[0-9]{10}" required/><br />
-     <input type="submit" value="opslaan"/>
-  </form>
-</div>
+  <form method="post" class="contactform">
+  <div class="form-group">
+    @Html.LabelFor(m => m.Firstname)
+    @Html.TextBoxFor(m => m.Firstname)
+    @Html.ValidationMessageFor(m => m.Firstname)
+  </div>  
+   <div class="form-group">
+    @Html.LabelFor(m => m.Lastname)
+    @Html.TextBoxFor(m => m.Lastname)
+    @Html.ValidationMessageFor(m => m.Lastname)
+  </div>
+
+  <div class="form-group">
+    @Html.LabelFor(m => m.Email)
+    @Html.TextBoxFor(m => m.Email)
+    @Html.ValidationMessageFor(m => m.Email)
+  </div>
+
+  <div class="form-group">
+    @Html.LabelFor(m => m.Description)
+    @Html.TextBoxFor(m => m.Description)
+    @Html.ValidationMessageFor(m => m.Description)
+  </div>
+
+  <input type="submit" value="verstuur" />
+</form>
+
+@if (Model != null){
+    <p>Hallo, @Model.Firstname @Model.Lastname</p>
+}

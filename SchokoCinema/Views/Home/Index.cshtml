@@ -10,11 +10,10 @@
     @foreach(Movie m in Model)
     {
       <div class="movie">    
-        <img src="@m.Poster"/>
+        <a href="movie/@m.id"> <img src="@m.Poster"/></a>
       </div>
     }
 </div>
-
 
 
 

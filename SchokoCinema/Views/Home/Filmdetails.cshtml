@@ -1,1 +1,17 @@
-﻿<p>tijmen h</p>
+﻿@using SchokoCinema.Database
+@model Movie
+@{
+    ViewData["Title"] = Model.Titel;
+}
+
+ <div class="filmDetails1">
+    <h1> @Model.Titel</h1>
+ </div>
+
+ <div class="filmDetails2">
+    <img src = "@Model.Poster">
+ </div>
+
+ <div class="filmDetails3">
+    <p>@Model.beschrijving</p>
+ </div>

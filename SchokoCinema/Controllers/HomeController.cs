@@ -25,7 +25,7 @@ namespace SchokoCinema.Controllers
             List<Movie> movies = GetAllMovies();
 
             // de lijst met namen in de html stoppen
-            return View(movies);
+            return View(movies );
         }
 
         public IActionResult Privacy()
@@ -40,21 +40,40 @@ namespace SchokoCinema.Controllers
         }
 
         [Route("contact")]
+
         public IActionResult Contact()
         {
             return View();
         }
+
+        [Route("contact")]
+        [HttpPost]
+        public IActionResult Contact(Person person)
+        {
+            if (ModelState.IsValid)
+                return Redirect("/succes");
+
+            return View(person);
+        }
+
+        [Route("succes")]
+        public IActionResult Succes()
+        {
+            return View();
+        }
+
         [Route("filmdetails")]
         public IActionResult filmdetails()
         {
             return View();
         }
 
-        [Route("Movies/{id}")]
+        [Route("movie/{id}")]
         public IActionResult Filmdetails(int id)
-        {           
+        {
+            var movie = GetMovie(id);
 
-            return View();
+            return View(movie);
         }
 
         public List<Movie> GetAllMovies()
@@ -76,8 +95,27 @@ namespace SchokoCinema.Controllers
 
             return movies;
         }
+        public Movie GetMovie(int id)
+        {
+            var rows = DatabaseConnector.GetRows($"select * from movie where id = {id}");
 
-    }    
+            List<Movie> movies = new List<Movie>();
+
+            foreach (var row in rows)
+            {
+                Movie m = new Movie();
+                m.Titel = row["titel"].ToString();
+                m.Poster = row["poster"].ToString();
+                m.beschrijving = row["beschrijving"].ToString();
+                m.id = Convert.ToInt32(row["id"]);
+
+                movies.Add(m);
+            }
+
+            return movies[0];
+        }
+
+    }
 
 }
 

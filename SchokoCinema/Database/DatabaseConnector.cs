@@ -13,7 +13,7 @@ namespace SchokoCinema.Controllers.Database
 
             // maak een lege lijst waar we de namen in gaan opslaan
             List<Dictionary<string, object>> rows = new List<Dictionary<string, object>>();
-
+            
 
             // verbinding maken met de database
             using (MySqlConnection conn = new MySqlConnection(connectionString))
